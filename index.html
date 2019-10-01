@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .vertical {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .horizontal {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .input-container {
+      margin: 0 auto;
+    }
+
+    .input {
+      align-items: center;
+    }
+
+    .delta {
+      width: 40px;
+    }
+
+    input:invalid {
+      border: 1px solid red;
+    }
+  </style>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="vertical container">
+    <div class="vertical input-container">
+      <div class="horizontal">
+        <div class="horizontal input" style="margin-right: 20px;">
+          <div class="vertical">
+            <label for="points">Number of points:</label>
+            <input id="points" type="number" value="40" step="1">
+          </div>
+          <div class="vertical">
+            <label for="pointsDelta">Delta:</label>
+            <input id="pointsDelta" class="delta" type="number" value="1" step="0.1">
+          </div>
+        </div>
+        <div class="horizontal input">
+          <div class="vertical">
+            <label for="factor">Multiplication factor:</label>
+            <input id="factor" type="number" value="4" step="1">
+          </div>
+          <div class="vertical">
+            <label for="factorDelta">Delta:</label>
+            <input id="factorDelta" class="delta" type="number" value="0.1" step="0.1">
+          </div>
+        </div>
+      </div>
+      <div>
+        <input type="checkbox" id="randomColors">
+        <label for="randomColors">Random colors</label>
+        <input type="checkbox" id="randomColorsRed">
+        <label for="randomColorsRed">Red</label>
+        <input type="checkbox" id="randomColorsGreen">
+        <label for="randomColorsGreen">Green</label>
+        <input type="checkbox" id="randomColorsBlue">
+        <label for="randomColorsBlue">Blue</label>
+      </div>
+    </div>
+    <canvas id="canvas" width="1300px" height="1300px"></canvas>
+  </div>
+</body>
